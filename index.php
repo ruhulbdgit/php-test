@@ -14,15 +14,25 @@
     $email = "";
 
     if ($_SERVER['REQUEST_METHOD'] === "POST") {
-        $fname = kodezen_validation($_POST['fname']);
-        $lname = kodezen_validation($_POST['lname']);
-        $email = kodezen_validation($_POST['email']);
+        $fname = kodezen_text_sanitize($_POST['fname']);
+        $lname = kodezen_text_sanitize($_POST['lname']);
+        $email = kodezen_emaill_sanitizen($_POST['email']);
     }
     function kodezen_validation($form_field_value)
     {
         $form_field_value = trim($form_field_value);
         $form_field_value = stripslashes($form_field_value);
         $form_field_value = htmlspecialchars($form_field_value);
+    }
+    function kodezen_text_sanitize($field_value)
+    {
+
+        return  filter_var($field_value, FILTER_SANITIZE_STRING);
+    }
+    function kodezen_emaill_sanitize($field_value)
+    {
+        $field_value = filter_var($field_value, FILTER_VALIDATE_EMAIL);
+        return  filter_var($field_value, FILTER_SANITIZE_EMAIL);
     }
 
     ?>
