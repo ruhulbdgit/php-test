@@ -30,10 +30,11 @@
 
         return  filter_var($field_value, FILTER_SANITIZE_STRING);
     }
-
+    // when we make a custom function for validate email senitize & validate example below
     function kodezen_emaill_sanitize($fields_value)
     {
-        $fields_value = filter_var($field_value, FILTER_VALIDATE_EMAIL);
+
+        $fields_value = filter_var($fields_value, FILTER_VALIDATE_EMAIL);
         return  filter_var($fields_value, FILTER_SANITIZE_EMAIL);
     }
 
@@ -61,7 +62,9 @@
         <li>Email:<?php echo $email; ?></li>
     </ul>
     </div>
-
+    <div>
+        <h5>Copy Write: <?php echo date("l jS \of F Y h:i:s A"); ?></h5>
+    </div>
 </body>
 
 </html>
