@@ -11,36 +11,46 @@
     <?php
 
     //fucntion testing
-    function test()
+    function sayhi($massage)
     {
-        echo "Testing -->" . " " . "test()";
+        echo "Hi," . "$massage";
     }
-    test();
+    sayhi('Rohim');
     echo "</br>";
-    //argument testing
-    function testWithArguments($tes)
+    function sayhallo($sms)
     {
-        echo  "$tes" . "Test";
+        echo "Hallo," . "$sms";
     }
-    testWithArguments("Ruhul");
+    sayhi('Dr.Unus');
     echo "</br>";
-    testWithArguments("Amin");
-
-    echo "<br>";
-    function withMoreArguments($name, $year)
+    function callbackfunc($name, $callback)
     {
-        echo "$name .Born in .$year";
+        return $callback($name);
     }
-    withMoreArguments("Ruhul", "2000");
+    echo callbackfunc('Robin Khan',  'sayhallo');
     echo "</br>";
 
-    //Callback Function 
-    function callBakFucntion($tesp, $callback)
-    {
-        return $callback($tesp);
-    }
+    //annonomuous
+    $numbers = [2, 3, 4];
+    $result = array_map(function ($single_number) {
+        return $single_number * 5;
+    }, $numbers);
+    var_dump($result);
+    //json 
+    echo "</br>";
+    $number = [2, 3, 4];
+    echo json_encode($number);
+    echo "<?br>";
+    $cars = array("Volvo", "BMW", "Toyota");
+    echo json_encode($cars);
+    echo "</br>";
+    $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
 
-    echo callBakFucntion('Dr Unus', 'testWithArguments');
+    var_dump(json_decode($jsonobj, true));
+
+
+
+
 
 
 
