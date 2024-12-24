@@ -93,11 +93,11 @@ if (isset($_COOKIE['user_id'])) {
         }
         function get_name()
         {
-            return $this->varName;
+            return "Name:" . $this->varName;
         }
         function get_color()
         {
-            return $this->varColor;
+            return "Color:" . $this->varColor;
         }
         function __destruct()
         {
