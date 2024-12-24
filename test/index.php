@@ -78,9 +78,51 @@ if (isset($_COOKIE['user_id'])) {
     $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
 
     var_dump(json_decode($jsonobj, true));
-    //Session & cokie
+    echo "</br>";
+    echo "<hr>";
+    echo "<h2>This is oop</h2>";
+    //oop 
+    class Car
+    {
+        public $varName;
+        public $varColor;
+        function __construct($varName, $varColor)
+        {
+            $this->varName = $varName;
+            $this->varColor = $varColor;
+        }
+        function get_name()
+        {
+            return $this->varName;
+        }
+        function get_color()
+        {
+            return $this->varColor;
+        }
+        function __destruct()
+        {
+            echo 'HI, I am from Destruct Fucntion';
+        }
+    }
+    //1st instans of Car class
+    $cars = new Car("BMW", "Red");
+    echo $cars->get_name();
+    echo "</br>";
+    echo $cars->get_color();
+    echo '</br>';
+    //2st instans of Car class
 
+    $cars2 = new Car("TOYOTA", "Blue");
+    echo $cars2->get_name();
+    echo "</br>";
+    echo $cars2->get_color();
+    echo '</br>';
     ?>
+
+
+
+
+
 
 </body>
 
