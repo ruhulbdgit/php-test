@@ -1,3 +1,32 @@
+<?php
+// Start session
+session_start();
+
+// Set session & cookie
+$_SESSION['username'] = "Rahim";
+setcookie("user_id", "12345", time() + (86400 * 7), "/"); // Cookie for 7 days
+
+echo "Session and Cookie are set.";
+?>
+
+<hr>
+
+<?php
+// cokkie & sesstion exess
+
+if (isset($_SESSION['username'])) {
+    echo "Session Username: " . $_SESSION['username'] . "<br>";
+} else {
+    echo "No session data found.<br>";
+}
+
+if (isset($_COOKIE['user_id'])) {
+    echo "Cookie User ID: " . $_COOKIE['user_id'];
+} else {
+    echo "No cookie found.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +37,9 @@
 </head>
 
 <body>
+
     <?php
+    echo "</br>";
 
     //fucntion testing
     function sayhi($massage)
@@ -47,12 +78,7 @@
     $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
 
     var_dump(json_decode($jsonobj, true));
-
-
-
-
-
-
+    //Session & cokie
 
     ?>
 
