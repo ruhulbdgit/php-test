@@ -146,6 +146,7 @@ if (isset($_COOKIE['user_id'])) {
     $strawberry = new Strawberry("Strawberry", "red");
     $strawberry->message();
     $strawberry->intro();
+    echo "<hr>";
     ?>
 
 
