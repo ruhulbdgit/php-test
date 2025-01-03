@@ -59,7 +59,7 @@ function kodezen_emaill_sanitize($fields_value)
 
 <?php include 'footer.php'; ?>
 <div>
-    <h5>Copy Write: <?php echo date("l jS \of F Y h:i:s A"); ?></h5>
+    <h5>Copy Write: <?php echo date("l-jS-of F Y h:i:s A"); ?></h5>
 
 </div>
 

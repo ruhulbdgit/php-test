@@ -134,8 +134,8 @@ if (isset($_COOKIE['user_id'])) {
         }
     }
 
-    // Strawberry is inherited from Fruit
-    class Strawberry extends Fruit
+    // inherited from Fruit
+    class inherate extends Fruit
     {
         public function message()
         {
@@ -143,9 +143,9 @@ if (isset($_COOKIE['user_id'])) {
         }
     }
 
-    $strawberry = new Strawberry("Strawberry", "red");
-    $strawberry->message();
-    $strawberry->intro();
+    $inherate = new inherate("Inhereted fruits", "red");
+    $inherate->message();
+    $inherate->intro();
     echo "<hr>";
     ?>
 
