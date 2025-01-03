@@ -57,11 +57,40 @@ function kodezen_emaill_sanitize($fields_value)
 </ul>
 </div>
 
-<?php include 'footer.php'; ?>
+
 <div>
     <h5>Copy Write: <?php echo date("l-jS-of F Y h:i:s A"); ?></h5>
 
 </div>
+<?php include 'footer.php'; ?>
+<?php
+// OOP testing in PHP
+
+echo "Hello\n"; // Fixed the newline character
+echo "</br>";
+
+class Car
+{
+    public $name;
+    public $color;
+
+    public function __construct($name, $color)
+    {
+        $this->name = $name;
+        $this->color = $color;
+    }
+
+    public function get_test()
+    {
+        return "Name: " . $this->name . ", Color: " . $this->color;
+    }
+}
+
+$car = new Car('Bmw', 'Red');
+echo $car->get_test();
+
+?>
+
 
 </body>
 
